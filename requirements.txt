@@ -1,0 +1,14 @@
+Flask==2.0.1
+Flask-SQLAlchemy==2.5.1
+flask-security-too
+Flask-CORS==3.0.10
+email_validator
+Flask-Bcrypt
+flask_restful
+flask_mail
+flask_caching
+redis
+celery
+celery[redis]
+eventlet
+python-dotenv
