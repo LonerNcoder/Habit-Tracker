@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #5cdb95;
+        }
+
+        .logo,
+        .title {
+            font-size: 25px;
+            color: white;
+            padding: 13px;
+            padding-bottom: 0;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .title {
+            float: right
+        }
+
+        .header {
+            background-color: #05386b;
+            height: 50px;
+        }
+
+        .greet-content {
+            margin-top: 4rem;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .greet {
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .smallcase {
+            font-size: 16px;
+            margin-left: 15px;
+        }
+
+        .main-content {
+            width: 100%;
+        }
+
+        .chart {
+            display: block;
+            width: 13rem;
+            height: 14rem;
+            background-color: #ffffff;
+            margin: 20px;
+            border-radius: 5%;
+            text-align: center;
+        }
+
+        .data {
+            background-color: #0fdc6b;
+            height: 11rem;
+            margin: 10px;
+            border-radius: 2%;
+        }
+
+        .data h1 {
+            color: #05386b;
+            font-size: 3rem;
+        }
+        h2{ 
+            font-size:16px;
+            color: #05386b;
+        }
+
+        .barchartOnLogFrequency{ 
+            width:29rem;
+        }
+        @media (max-width: 700px) {
+            #maintable tr,
+            #maintable td {
+                display: block;
+                width: 100%;
+            }
+
+            #maintable tr {
+                margin-bottom: 20px;
+            }
+            .data h1{
+                margin-top:4rem;
+            }
+            .barchartOnLogFrequency{ 
+                width:13rem;
+        }
+        }
+    </style>
+</head>
+
+<body style="background-color: #5cdb95;">
+    <div class="header">
+        <div class="logo">HX</div>
+        <div class="title">Monthly Report</div>
+    </div>
+    <div class="greet-content">
+        <div class="greet">Hi {{data['username']}}</div>
+        <div class="smallcase">This is your report for last 30 days</div>
+    </div>
+    <table id="maintable" style="margin-left:auto;margin-right:auto; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="chart totalTrackers">
+                        <h2>Total Trackers</h2>
+                        <div class="data">
+                            <table class="secondtable" style="margin:auto;width:100%;height:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h1>{{data["total_trackers"]}}</h1>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="chart total-logs">
+                        <h2>Total Logs till Date</h2>
+                        <div class="data">
+                            <table class="secondtable" style="margin:auto;width:100%;height:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h1>{{data['total_logs']}}</h1>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="chart logs-created-this-month">
+                        {% if data["log_created_this_month"] > 0 %}
+                        <h2>Logs Created This Month</h2>
+                        {% else %}
+                        <h2>Logs Deleted This Month</h2>
+                        {% endif %}
+                        <div class="data">
+                            <table class="secondtable" style="margin:auto;width:100%;height:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h1>{{data["log_created_this_month"]}}</h1>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="chart emotion-frequency">
+                        <h2>Frequent Emotional State</h2>
+                        <div class="data">
+                            <table class="secondtable" style="margin:auto;width:100%;height:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h1>{{data["frequent_emotional_state"]}}</h1>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    <div class="chart barchartOnLogFrequency">
+                        <h2>Total Logged In</h2>
+                        <div class="data">
+                            <table class="secondtable" style="margin:auto;width:100%;height:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h1>{{data["total_logged_in"]}} Times</h1>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

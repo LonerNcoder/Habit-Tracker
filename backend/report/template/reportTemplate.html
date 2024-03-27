@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <title>Report</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Habbit Experience aka HX">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <style>
+        @page{
+          margin:0;
+      }
+      
+      body{
+      margin:0;
+      padding:0;
+      background-color: #5CDB95;
+      /* text-rendering: geometricPrecision; */
+      }
+      .header{
+      display:flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items: center;
+      background-color:#05386b;
+      height:4rem;
+      }
+      .logo{
+      float:left;
+      font-size:2em;
+      margin-left:10px;
+      color:#ffffff;
+      }
+      .title{
+      float:right;
+      font-size:2em;
+      margin-right:10px;
+      color:#ffffff;
+      }
+      
+      .greet-content{
+      /* display:grid;
+      grid-auto-flow: row;
+      justify-content: center;
+      align-items: center;
+      margin-left:10px;
+      grid-template-columns: repeat(auto-fill,1fr); */
+      margin-top:0.3in;
+      /* margin-left: min(2.5in,10%); */
+      }
+      .greet{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em;
+      color:white;
+      font-family:Sans-serif;
+      font-weight:800;
+      }
+      .smallcase{
+      color: #05386b;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      }
+      
+      .main-content {
+      margin-top:0.3in;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      }
+      .main-content .chart{
+      height:18rem;
+      width:20rem;
+      border-radius: 10%;
+      background-color: #EDF5E1;
+      margin-bottom: 0.1in;
+      }
+      .main-content .chart h2{
+      height:50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 20px;
+      }
+      .data{
+      background: #2ff287;
+      display: flex;
+      width: 18rem;
+      height: 11.5rem;
+      margin-left: 16px;
+      border-radius: 5%;
+      justify-content: center;
+      }
+      .data h1{ 
+      font-size: 60px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: #05386b;
+      }
+      </style>
+
+
+
+  </head>
+  <body style="background-color: #5CDB95;">
+    <div id="report"></div>
+        <div class="header" style="height:4rem; background-color: #05386b; color:white; padding: 0 15px 0 15px;">
+            <div class="logo" style="font-size:2em">HX</div>
+            <div class="title" style="font-size:2em">Monthly Report</div>
+        </div>
+        <div class="greet-content">
+            <div class="greet" style="font-size: 3em;color:white; font-weight:800;font-family:Sans-serif;">Hi {{data['username']}}</div>
+            <div class="smallcase" style="color: #05386b;">This is your monthly report for last 30 days.</div>
+        </div>
+        <div class="main-content">
+            <div class="chart totalTrackers">
+                <h2>Total Trackers</h2>
+                <div class="data">
+                    <h1>{{data["total_trackers"]}}</h1>
+                </div>
+            </div>
+            <div class="chart total-logs">
+                <h2>Total Logs till Date</h2>
+                <div class="data">
+                    <h1>{{data['total_logs']}}</h1>
+                </div>
+            </div>
+            <div class="chart logs-created-this-month">
+                {% if data["log_created_this_month"] > 0 %}
+                <h2>Logs Created This Month</h2>
+                {% else %}
+                <h2>Logs Deleted This Month</h2>
+                {% endif %}
+                <div class="data">
+                    <h1>{{data["log_created_this_month"]}}</h1>
+                </div>
+            </div>
+            <div class="chart emotion-frequency">
+                <h2>Frequent Emotional State</h2>
+                <div class="data">
+                    <h1>{{data["frequent_emotional_state"]}}</h1>
+                </div>
+            </div>
+            <div class="chart barchartOnLogFrequency">
+                <h2>Total Logged In</h2>
+                <div class="data">
+                    <h1>{{data["total_logged_in"]}} Times</h1>
+                </div>
+            </div>
+        </div>
+  </body>
+</html>

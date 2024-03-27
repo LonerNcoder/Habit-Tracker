@@ -1,0 +1,12 @@
+
+"Hey {{ username}} You got some tasks to complete today !."
+
+
+your tasks for today are:
+
+
+{% for i in message %}
+
+{{i["msg"]}} - {{i["at"]}}
+
+{% endfor %}

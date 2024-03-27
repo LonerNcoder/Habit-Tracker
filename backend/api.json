@@ -1,0 +1,474 @@
+[
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "greet",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 283
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "backup",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 778
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/backup"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "verify_email",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 372
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/confirm_email"
+  },
+  {
+    "args": [
+      "token",
+      "user_id"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "confirm_email",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 389
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/confirm_email/<token>/<int:user_id>"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "post",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 289
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/create_user"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "deleteUser",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 360
+    },
+    "methods": [
+      "DELETE",
+      "OPTIONS"
+    ],
+    "rule": "/delete_user"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "document",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 799
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/doc"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "login",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 313
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/login"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "logout",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 327
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/logout"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "monthly_report_type",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 666
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/monthly_report_type"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "daily_notification_type",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 650
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/notification_type"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "reload_uniqfier",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 746
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/reload_uniqfier"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "send_tracker_csv",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 703
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/tracker_csv_download"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "send_tracker_csv_token",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 684
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/tracker_csv_token"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "send_log_zip",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 731
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/tracker_logs_zip_download"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "zipfile",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 715
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/tracker_logs_zip_token"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "getallTrackers",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 420
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/user/trackers"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "createTracker",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 460
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/user/trackers"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "updateTrackers",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 488
+    },
+    "methods": [
+      "OPTIONS",
+      "PUT"
+    ],
+    "rule": "/user/trackers"
+  },
+  {
+    "args": [
+      "id"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "getSingleTracker",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 443
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/user/trackers/<int:id>"
+  },
+  {
+    "args": [
+      "id"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "get_logs",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 529
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/user/trackers/<int:id>/logs"
+  },
+  {
+    "args": [
+      "id"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "addLogs",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 565
+    },
+    "methods": [
+      "OPTIONS",
+      "POST"
+    ],
+    "rule": "/user/trackers/<int:id>/logs"
+  },
+  {
+    "args": [
+      "id"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "updateLogs",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 596
+    },
+    "methods": [
+      "OPTIONS",
+      "PUT"
+    ],
+    "rule": "/user/trackers/<int:id>/logs"
+  },
+  {
+    "args": [
+      "id",
+      "log_id"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "deleteLog",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 633
+    },
+    "methods": [
+      "DELETE",
+      "OPTIONS"
+    ],
+    "rule": "/user/trackers/<int:id>/logs/<int:log_id>/delete"
+  },
+  {
+    "args": [
+      "tracker_id"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "deleteTrackers",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 510
+    },
+    "methods": [
+      "DELETE",
+      "OPTIONS"
+    ],
+    "rule": "/user/trackers/<int:tracker_id>"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "verify_status",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 407
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/user/verification_status"
+  },
+  {
+    "args": [
+      "None"
+    ],
+    "defaults": {},
+    "docstring": null,
+    "endpoint": "user_details",
+    "location": {
+      "filename": "c:\\Users\\parag\\21f1005547\\backend\\app.py",
+      "line": 341
+    },
+    "methods": [
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "rule": "/user_details"
+  }
+]
